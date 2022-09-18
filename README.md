@@ -1,6 +1,7 @@
 # Engineering__pay
 
-
+This is a console software system for salaries to Engineers
+-> Practicing OOP with Kotlin
 
 
 
