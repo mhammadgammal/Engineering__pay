@@ -13,31 +13,30 @@ class Engineer(ID: Int, age: Int, name: String, _position: String) : Employee(ID
 	var payRate: Int = 0
 	var taxRate: Int = 0
 	var salary=
-		 if(position == "manager" || position == "Manager")
-		 {
-		 	 payRate = 5000
-			 workingHours = 25
-			 taxRate = 35
-			 (payRate/workingHours) - taxRate
-		 }
-		 else if(position == "team leader")
-		 {
-			 payRate = 3000
-			 workingHours = 25
-			 taxRate = 25
-			 (payRate/workingHours) - taxRate
-		 }
-		 else if(position == "Member" || position == "member")
-		 {
-			 payRate = 1000
-			 workingHours = 25
-			 taxRate =  15
-			 (payRate/workingHours) - taxRate
-		 }
-	else {
-			 println("Wrong choice")
-			 0
-	}
+		when (position) {
+			"manager", "Manager" -> {
+				payRate = 5000
+				workingHours = 25
+				taxRate = 35
+				(payRate/workingHours) - taxRate
+			}
+			"team leader" -> {
+				payRate = 3000
+				workingHours = 25
+				taxRate = 25
+				(payRate/workingHours) - taxRate
+			}
+			"Member", "member" -> {
+				payRate = 1000
+				workingHours = 25
+				taxRate =  15
+				(payRate/workingHours) - taxRate
+			}
+			else -> {
+				println("Wrong choice")
+				0
+			}
+		}
 		
 	
 	

@@ -8,10 +8,12 @@ fun main() {
 	trainees.add(T2)
 	var T3: trainee? = trainee(3, 21, "Hassan", 1.9F, "Banha", 3)
 	trainees.add(T3)
+	listTrainees(trainees)
 	//addTrainee()
 	//listTrainees(trainees)
 	//edittrainee(3)
 	deleteTrainee(3)
+	
 }
 fun listTrainees(trainees:MutableList<trainee?>){
 	trainees.forEach {
